@@ -61,7 +61,7 @@ export default function Form(){
     return(
         <>
 
-            <form onSubmit={handleSubmit} className="bg-gray-500 border border-black rounded-xl p-5 text-white">
+            <form onSubmit={handleSubmit} className="bg-gray-500 border border-black-300 rounded-xl p-5 text-white">
 
                 <div className="md:flex gap-5 pt-3">
                     <TextField

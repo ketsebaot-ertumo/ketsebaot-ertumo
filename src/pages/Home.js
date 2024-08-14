@@ -6,9 +6,31 @@ import Footer from "../component/Footer";
 import Form from "../component/Form";
 import {  Phone, WhatsApp } from "@mui/icons-material";
 import ImageSlider from '../component/ImageSlider';
+import SkillsSection from '../component/Skill';
+// Dummy image imports
+import react from "../images/react.png";
+import reactNative from "../images/reactNative.png";
+import node from "../images/node.png";
+import java from "../images/java.png";
+import cplusplus from "../images/c++.png";
+import next from "../images/next.png";
+import typeScript from "../images/typescript.jpeg";
+import postgreSQL from '../images/postgreSQL.png';
+import mongoDB from '../images/mongodb.png';
+import mariaDB from '../images/mariaDB.png';
+import graphQL from '../images/graphQL.png';
 
 
 export default function Home (){
+
+    const images1 = [
+        cplusplus, java, node, react, reactNative, next,
+        postgreSQL, mongoDB, mariaDB, graphQL
+    ];
+    const images2 = [
+        cplusplus, java, node, react, reactNative, next,
+        postgreSQL, mongoDB, mariaDB, graphQL
+    ];
 
     return(
         <>
@@ -36,18 +58,20 @@ export default function Home (){
                         <img className="h-[550px] hidden md:flex" src={Me} alt="Me"/>
                     </div>
 
-                    <div id="skills" className="bg-black-400 pt-20 mt-5 pb-10 text-center">
-                        <div className="text-4xl pb-10 font-bold">Skills</div>
-                        <div className="md:mx-60 mx-5 text-justify text-align md:text-center">As a full-stack developer and electrical & computer engineer, I possess extensive expertise spanning a wide range of programming languages, frameworks, and technologies, including C++, Java, Tailwind CSS, React.js, React-Native, Flutter, Node.js, TypeScript, PostgreSQL, MariaDB, MongoDB, GraphQL and MySql. In addition to core software development, I also have experience in cybersecurity, networking, and system configurations. This diverse technical skillset enables me to tackle a variety of challenges and deliver innovative, user-friendly solutions tailored to my clients' evolving needs.</div>
-                        <ImageSlider />
-                    </div>
+                   <div className='bg-black-300'>
+                        <SkillsSection/>
+                        <ImageSlider images={images1} backgroundColor="bg-black-300" buttonColor="bg-black-400" />
+                   </div>
 
-                    <div id="projects" className="bg-black-300 pt-20 pb-10 text-center">
+                    <div id="projects" className="bg-black-400 py-20 text-center">
                         <div className="text-4xl pb-10 font-semibold">Projects</div>
-                        <div className="md:mx-60 mx-5 text-justify text-align md:text-center">The projects I've worked on demonstrate my diverse experience in web and application development. I've built a full-stack blog platform using the MERN stack, as well as a Data Hub System and my own personal portfolio website. I've also developed the TechEthio website, a Temperature Converter application, and various gaming applications. Additionally, I've created an architecture website for Lik, a mobile solution management website, a web scraping application, and an ERP Next system. This range of projects showcases my proficiency in front-end and back-end technologies, my ability to tackle complex challenges, and my adaptability to different development environments and requirements.</div>
+                        <div className="md:mx-60 mx-5 text-justify text-align md:text-center">The projects I've worked on demonstrate my diverse experience in web and application development. I've built a full-stack blog platform using the MERN stack, as well as a Data Hub System and my own personal portfolio website. I've also developed the TechEthio website, a Temperature 
+                            Converter application, and various gaming applications. Additionally, I've created an architecture website for Lik, a mobile solution management website, a web scraping application, and an ERP Next system. This range of projects showcases my proficiency in front-end and back-end technologies, my ability to tackle complex challenges, and my adaptability to different development environments and requirements.
+                        </div>
+                        {/* <ImageSlider images={images2} backgroundColor="bg-black-400" buttonColor="bg-black-300"/> */}
                     </div>
 
-                    <div id="#contact-me" className="bg-black-400 md:pt-20 pb-10 text-justify md:text-center">
+                    <div id="#contact-me" className="bg-black-300 md:pt-20 pb-10 text-justify md:text-center">
                         {/* <div className="text-4xl pb-10 font-semibold">Contact Me</div> */}
                         <div className="md:flex gap-10 px-5 md:px-40">
                             <div className="md:w-[70%] px-5 md:px-0 pb-5 md:pb-0">

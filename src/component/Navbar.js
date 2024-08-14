@@ -31,7 +31,6 @@ export default function Navbar(){
           const section = document.querySelector(hash);
           if (section) {
             const elementOffsetTop = section.offsetTop;
-            const windowHeight = window.innerHeight;
             const shiftAmount = 80;
             const scrollPosition = elementOffsetTop - shiftAmount;
             window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
@@ -41,7 +40,7 @@ export default function Navbar(){
 
     return(
         <>
-            <div className={`flex justify-between px-5 sm:px-10 py-5 fixed z-40 w-full h-[44px] md:h-[60px] ${scrolled ? 'bg-black-500' : 'bg-transparent'}`}>
+            <div className={`flex justify-between px-5 sm:px-10 py-5 fixed z-40 w-full h-[44px] md:h-[60px] ${scrolled ? 'bg-black-400' : 'bg-transparent'}`}>
                 <div className="flex items-center gap-5">
                     <div><Avatar src={Me} alt="" /></div>
                     {/* <div>Ketsebaot Ertumo</div> */}
@@ -55,7 +54,7 @@ export default function Navbar(){
                     <Link to='/#projects'><div className="hover:text-gray-400">Projects</div></Link>
                     <div className="flex gap-5">
                         <Link className=" hover:text-gray-400" to="www.linkedin.com/in/ketsebaot-ertumo-133346245"><LinkedIn /></Link>
-                        <Link className=" hover:text-gray-400" to="https://www.instagram.com/e_ketsebaot/"><Instagram /></Link>
+                        <Link className=" hover:text-gray-400" to="https://www.instagram.com/e_ketsebaot"><Instagram /></Link>
                         <Link className="hover:text-gray-400" to="mailto:ertumoketsebaot@gmail.com"><Email /></Link>
                         
                     </div>
